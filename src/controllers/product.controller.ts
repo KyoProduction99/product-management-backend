@@ -31,7 +31,6 @@ export class ProductController {
       const sortFieldStr =
         typeof sortField === "string" ? sortField : "createdAt";
       const sortOrderStr = sortOrder === "ASC" ? "ASC" : "DESC";
-      console.log(sortFieldStr);
 
       const [products, total] = await this.em.findAndCount(Product, payload, {
         limit: Number(limit),
